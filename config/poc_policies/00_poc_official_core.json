@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "detection": {
+    "execution_mode": "rule_only",
+    "merge_mode": "any",
+    "selected_categories": [
+      "resident_registration_number",
+      "foreigner_registration_number",
+      "passport_number",
+      "driver_license_number"
+    ],
+    "sensitivity_level": 4,
+    "pattern_strictness": "ocr_tolerant",
+    "aegis_scope": "semantic",
+    "aegis_entity_types": [
+      "SURNAME",
+      "GIVENNAME",
+      "CITY",
+      "STREET",
+      "ZIPCODE",
+      "BUILDINGNUM"
+    ],
+    "aegis_threshold_adjustment": -0.15,
+    "minimum_confidence": 0.0,
+    "minimum_risk_level": 1,
+    "checksum_validation_enabled": false,
+    "checksum_invalid_action": "mask",
+    "minimum_context_evidence_count": 0,
+    "missing_context_action": "mask",
+    "anchor_required_categories": [],
+    "missing_anchor_action": "exclude",
+    "review_handling": "mask_all",
+    "max_adjacent_lines": 3,
+    "custom_person_field_labels": [],
+    "custom_address_field_labels": []
+  },
+  "masking": {
+    "padding": 2
+  }
+}
