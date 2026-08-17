@@ -1,0 +1,11 @@
+# Python cache and local environments
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# Generated processing results
+results/
+output/
+outputP/
+

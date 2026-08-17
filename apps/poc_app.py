@@ -16,6 +16,7 @@ import hashlib
 from io import BytesIO, StringIO
 import json
 import mimetypes
+import os
 from pathlib import Path
 from time import perf_counter
 import sys
@@ -64,7 +65,10 @@ MODEL_ROOT = PROJECT_ROOT / "models"
 POC_RESULT_ROOT = PROJECT_ROOT / "results" / "poc"
 POC_IMAGE_ROOT = POC_RESULT_ROOT / "images"
 POC_OCR_ROOT = POC_RESULT_ROOT / "ocr"
-DEFAULT_OCR_URL = "http://172.30.1.6:19815/sample/fullpage"
+DEFAULT_OCR_URL = os.environ.get(
+    "PII_OCR_URL",
+    "http://127.0.0.1:19815/sample/fullpage",
+)
 
 POC_IDENTIFIER_CATEGORIES = (
     "resident_registration_number",
